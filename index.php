@@ -1,3 +1,13 @@
+<?php 
+
+    //DB CONNECTION
+    $conn = mysqli_connect("localhost", "root", "", "LoginAndRegistrationSystem");
+    if($conn->connect_error) {
+        echo "Failed To Connect" . $conn->connect_error;
+    }
+    
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
