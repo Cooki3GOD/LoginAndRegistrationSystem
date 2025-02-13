@@ -27,21 +27,21 @@
 
         <label>
 
-            <i class="fa-solid fa-user"></i>
+            <span><i class="fa-solid fa-user"></i></span>
             <input type="text" name="username" placeholder="Username">
 
         </label>    
         <br>
         <label>
 
-            <i class="fa-solid fa-lock"></i>
+            <span><i class="fa-solid fa-lock"></i></span>
             <input type="password" name="password" placeholder="Password">
 
         </label>
         <br>
         <label>
 
-            <i class="fa-solid fa-at"></i>
+            <span><i class="fa-solid fa-at"></i></span>
             <input type="email" name="email" placeholder="Email:">
 
         </label>
