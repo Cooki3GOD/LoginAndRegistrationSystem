@@ -26,7 +26,7 @@
         <form action="index.php" method="post">
 
         <label>
-
+            
             <span><i class="fa-solid fa-user"></i></span>
             <input type="text" name="username" placeholder="Username">
 
@@ -50,7 +50,32 @@
 
         </form>
 
+    <?php 
+    
+        if($_SERVER["REQUEST_METHOD"] == "POST") {
+            if(isset($_POST["username"]) && isset($_POST["password"]) && isset($_POST["email"])) {
+                $username = $_POST["username"];
+                $password = $_POST["password"];
+                $email = $_POST["email"];
+                $result = mysqli_query($conn, "SELECT username, password, email FROM accounts");
+                while ($row = mysqli_fetch_array($result)) {
+                    if($username === $row[0] && $password === $row[1] && $email === $row[2]) {
+                        header("Location: loggedIn.php");
+                    }
+                    else {
+                        echo "Wrong details entered";
+                    }
+                }
+            }
+            else {
+                echo "Enter all details!";
+            }
+        }
+            
+    
+    ?>
     </div>
+
 
 </body>
 </html>
